@@ -43,7 +43,10 @@ export default function App() {
       <View style={styles.container}>
         <View style={styles.areaMoeda}>
           <Text style={styles.titulo}>Selecione sua moeda</Text>
-          <Picker/>
+          <Picker 
+            moedas={moedas}
+            onChange={ (moeda) => setMoedaSelecionada(moeda) }
+          />
         </View>
         <View style={styles.areaValor}>
           <Text style={styles.titulo}>Digite um valor para converter em (R$)</Text>
